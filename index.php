@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,6 @@
     <script src="js/app.js"></script>
     <title>Have Together | 함께하는 즐거움</title>
 </head>
-
 <body>
     <div class="chack_agent">
         <div class="main_box">
@@ -27,6 +25,7 @@
                             <div id="cat-menu">Drink</div>
                             <div id="cat-menu">Eat</div>
                             <div id="cat-menu">Norebang</div>
+                            <div id="cat-menu">sadkoasfgoasngo</div>
                         </div>
                     </div>
                     <div class="cats cat-3">Together</div>
@@ -36,8 +35,8 @@
                 </div>
             </div>
             <div class="ht_button">Have Together</div>                                                               
-            <div class="border_list open">
-                <div class="list-box open">
+            <div class="border_list">
+                <div class="list-box">
                     <div class="title">24 Have Together</div>
                     <div class="con">
                         <div class="bast">Bast matches</div>
@@ -132,10 +131,159 @@
                             </div>
                         </div>
                         <div class="con-box cat-boxs">
-                            <div class="catboxs"></div>
-                            <div class="catboxs"></div>
-                            <div class="catboxs"></div>
-                            <div class="catboxs"></div>
+                            <div class="catboxs">
+                                <div class="boxs active">
+                                <div class=icon><i class="fas fa-coffee"></i></div>
+                                <div class="titles">Coffee</div>
+                                </div>
+                            </div>
+                            <div class="catboxs">
+                                <div class="boxs">
+                                <div class=icon><i class="fas fa-beer"></i></div>
+                                <div class="titles">Drink</div>
+                                </div>
+                            </div>
+                            <div class="catboxs">
+                                <div class="boxs">
+                                <div class=icon><i class="fas fa-utensils"></i></div>
+                                <div class="titles">Eat</div>
+                                </div>
+                            </div>
+                            <div class="catboxs">
+                                <div class="boxs">
+                                <div class=icon><i class="fas fa-microphone-alt"></i></div>
+                                <div class="titles">Norebang</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con-box bord-list">
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con-box ad-boxs">
+                            <div class="ad">
+                                <img src="./bin/img/ta52.png" alt="">
+                            </div>
+                        </div>
+                        <div class="con-box bord-list">
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

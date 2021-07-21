@@ -3,7 +3,7 @@ $(function () {
         $(".list-box").toggleClass('open');
         $(".border_list").toggleClass('open');
         $(".cat-box").removeClass('open');
-        $(".HTbutton").css('display', 'none');
+        $(".ht_button").css('display', 'none');
     })
     $(".cat-box #cat-menu").click(function () {
         var cat = $(this).text();

@@ -20,4 +20,9 @@ $(function () {
         $(".list-box").removeClass('open');
         $(".border_list").removeClass('open');
     })
+    $(".ht_button").on("swipe",swttt);
+    function swttt() {
+        alert("Swipe");
+    }
+
 });

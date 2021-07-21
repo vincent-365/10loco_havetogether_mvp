@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link href="./css/all.css" rel="stylesheet">
-    <script defer src="./js/all.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script defer src="./js/all.js"></script>
     <script src="js/app.js"></script>
     <title>Have Together | 함께하는 즐거움</title>
 </head>
@@ -292,15 +295,7 @@
         </div>
     </div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d9d73704ebd737b5760c728a51e9eff6"></script>
-    <script type="text/javascript">
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.50945650000564, 127.04195023051872),
-            level: 4
-        };
-
-        var map = new kakao.maps.Map(container, options);
-    </script>
+    <script type="text/javascript" src="./js/map.js"></script>
 </body>
 
 </html>

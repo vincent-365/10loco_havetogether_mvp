@@ -283,8 +283,6 @@ include("./head.php");
         <div class="add_button"><img src="./bin/img/iiii2.svg" alt=""></div>
     </div>
 </div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d9d73704ebd737b5760c728a51e9eff6"></script>
-<script type="text/javascript" src="./js/map.js"></script>
 <?php
 
 include("./footer.php");

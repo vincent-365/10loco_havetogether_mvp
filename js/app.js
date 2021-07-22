@@ -20,9 +20,15 @@ $(function () {
         $(".list-box").removeClass('open');
         $(".border_list").removeClass('open');
     })
-    $(".ht_button").on("swipe",swttt);
-    function swttt() {
-        alert("Swipe");
-    }
-
-});
+    $("#report").click(function () {
+        $(".report").css('display','block');
+        $(".meet-main-title").css('display','none');
+        $(".meet-con-box").css('display','none');
+    })
+    $("#report-exit").click(function () {
+        $(".report").css('display','none');
+        $(".meet-main-title").css('display','block');
+        $(".meet-con-box").css('display','block');
+    })
+    
+})

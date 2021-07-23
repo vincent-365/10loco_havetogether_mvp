@@ -21,6 +21,9 @@ img{
     width: 100%;
     height: 100%;
 }
+body{
+    background: #EFEFEF;
+}
     .main_box{
         position: relative;
         width: 100vw;

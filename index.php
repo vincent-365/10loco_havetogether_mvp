@@ -273,7 +273,7 @@ include("./head.php");
                                 </div>
                                 <div class="brod-title">Korea cafe</div>
                                 <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                <div class="bord-info2"><i class="fas fa-user"></i> name 5 <i class="far fa-star"></i></div>
                             </div>
                         </div>
                     </div>

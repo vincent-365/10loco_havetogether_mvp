@@ -33,94 +33,41 @@ include("./head.php");
                 <div class="con">
                     <div class="bast">Bast matches</div>
                     <div class="con-box cont-top">
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
+
+
+                        <?php
+                        for ($i = 0; $i < 5; $i++) {
+                        ?>
+                            <div class="contop-box">
+                                <div class="cons">
+                                    <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+                                    <div class="title-box">Kimbob</div>
+                                    <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
+                                    <div class="lll-top">
+                                        <div>
+                                            <div class="lll-box1">
+                                                <img src="./bin/img/meeting-point.svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                        <div>
+                                            <div class="lll-box1">
+                                                <img src="./bin/img/time.svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                        <div>
+                                            <div class="lll-box1">
+                                                <img src="./bin/img/teamwork (1).svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="contop-box">
-                            <div class="cons">
-                                <div class="img-box"><img src="https://images.unsplash.com/photo-1608731001805-187e9c904388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></div>
-                                <div class="title-box">Kimbob</div>
-                                <div class="info-box"><i class="fas fa-map-marker-alt"></i> Gangnam Office</div>
-                                <div class="info-box2"><i class="fas fa-user"></i> Name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
+                        <?php } ?>
+
+
                     </div>
                     <div class="con-box cat-boxs">
                         <div class="catboxs">
@@ -149,133 +96,51 @@ include("./head.php");
                         </div>
                     </div>
                     <div class="con-box bord-list">
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                        <?php
+                        for ($i = 1; $i < 29; $i++) {
+                        ?>
+                            <div class="bord-box">
+                                <div class="bord">
+                                    <div class="bord-img">
+                                        <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                                    </div>
+                                    <div class="brod-title">Korea cafe</div>
+                                    <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
+                                    <div class="lll">
+                                        <div>
+                                            <div class="lll-box2">
+                                                <img src="./bin/img/meeting-point.svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                        <div>
+                                            <div class="lll-box2">
+                                                <img src="./bin/img/time.svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                        <div>
+                                            <div class="lll-box2">
+                                                <img src="./bin/img/teamwork (1).svg" alt="">
+                                            </div>
+                                            <div class="lll-text"> 1km</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
                             </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+                            <?php
+                            if ($i % 10 == 0) {
+                            ?>
+                                <div class="ad">
+                                    <img src="./bin/img/ta52.png" alt="">
                                 </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
+                            <?php
+                            }
+                            ?>
+                        <?php } ?>
                     </div>
                     <div class="con-box ad-boxs">
-                        <div class="ad">
-                            <img src="./bin/img/ta52.png" alt="">
-                        </div>
-                    </div>
-                    <div class="con-box bord-list">
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5<i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div class="bord-box">
-                            <div class="bord">
-                                <div class="bord-img">
-                                    <img src="https://images.unsplash.com/photo-1526199119161-4be1e3368d52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
-                                </div>
-                                <div class="brod-title">Korea cafe</div>
-                                <div class="bord-info1"><i class="fas fa-map-marker-alt"></i> Hapjeong Station</div>
-                                <div class="bord-info2"><i class="fas fa-user"></i> name 5 <i class="far fa-star"></i></div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

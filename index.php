@@ -70,30 +70,18 @@ include("./head.php");
 
                     </div>
                     <div class="con-box cat-boxs">
-                        <div class="catboxs">
-                            <div class="boxs active">
-                                <div class=icon><i class="fas fa-coffee"></i></div>
-                                <div class="titles">Coffee</div>
+                        <?php
+                        for ($t = 0; $t < 4; $t++) {
+                        ?>
+                            <div class="catboxs">
+                                <div class="boxs active">
+                                    <div class=icon><i class="fas fa-coffee"></i></div>
+                                    <div class="titles">Coffee</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="catboxs">
-                            <div class="boxs">
-                                <div class=icon><i class="fas fa-beer"></i></div>
-                                <div class="titles">Drink</div>
-                            </div>
-                        </div>
-                        <div class="catboxs">
-                            <div class="boxs">
-                                <div class=icon><i class="fas fa-utensils"></i></div>
-                                <div class="titles">Eat</div>
-                            </div>
-                        </div>
-                        <div class="catboxs">
-                            <div class="boxs">
-                                <div class=icon><i class="fas fa-microphone-alt"></i></div>
-                                <div class="titles">Norebang</div>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                     <div class="con-box bord-list">
                         <?php
@@ -129,7 +117,7 @@ include("./head.php");
                                 </div>
                             </div>
                             <?php
-                            if ($i % 10 == 0) {
+                            if ($i % 8 == 0) {
                             ?>
                                 <div class="ad">
                                     <img src="./bin/img/ta52.png" alt="">

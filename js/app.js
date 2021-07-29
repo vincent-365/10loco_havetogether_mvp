@@ -19,6 +19,7 @@ $(function () {
         $(".cat-box").toggleClass('open');
         $(".list-box").removeClass('open');
         $(".border_list").removeClass('open');
+        $(".ht_button").css('display', 'block');
     })
     $("#report").click(function () {
         $(".report").css('display','block');

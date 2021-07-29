@@ -21,6 +21,7 @@ img{
 body{
     background: #EFEFEF;
 }
+
     .main_box{
         position: relative;
         width: 100vw;
@@ -345,6 +346,7 @@ body{
     margin-bottom: 25px;
     -webkit-box-shadow: #52e48d 0px 1px 4px;
             box-shadow: #52e48d 0px 1px 4px;
+    width:100%;
 }
 .ad img{
     width: 100%;

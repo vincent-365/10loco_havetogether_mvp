@@ -116,10 +116,6 @@ body{
     }
     .cat-box #cat-menu{
         padding: 10px 10px;
-        border-bottom:2px solid #52E48D;
-    }
-    .cat-box #cat-menu:last-child{
-        border-bottom:none;
     }
     .add_button{
         position: fixed;
@@ -368,4 +364,112 @@ body{
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+}
+.container .cons-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+}
+.container .cons-box .titles{
+    font-size: 1.5rem;
+    order: 1;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #52E48D;
+}
+.container .cons-box .butt{
+    border-radius: 30px;
+    border: 1px solid #52E48D;
+    color: #fff;
+    padding: 15px 30px;
+    background: #52E48D;
+    font-size: 20px;
+    -webkit-box-shadow: #52e48d 0px 1px 4px;
+    box-shadow: #52e48d 0px 1px 4px;
+}
+.catcho{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+    text-align: center;
+    background: #fff;
+    padding: 20px 100px;
+    -webkit-box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    display: none;
+}
+.catcho .catcho_box{
+    margin: 10px;
+}
+#catcho_clo{
+    position: fixed;
+    top: 5px;
+    right: 10px; 
+}
+#m_cloes{
+    color: #52E48D;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+}
+
+.modals{
+    position: fixed;
+    flex-direction: row;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.modals .modals_box{
+    width: 90%;
+    height: 300px;
+    display: inline-block;
+    margin: 9px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+#modals_clo{
+    position: fixed;
+    top: 5px;
+    right: 10px; 
+}
+#m_cloes{
+    color: #52E48D;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
 }

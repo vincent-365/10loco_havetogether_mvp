@@ -31,5 +31,34 @@ $(function () {
         $(".meet-main-title").css('display','block');
         $(".meet-con-box").css('display','block');
     })
+    $(".butt").click(function () {
+        location.href = 'm_event.php';
+    })
+    $("#choice_cat").click(function () {
+        $(".catcho").css('display','flex');
+    });
+    $(".catcho .catcho_box").click(function () {
+        var cat = $(this).text();
+        $("#choice_cat").text(cat);
+        $(".catcho").css('display','none');
+    });
+    $("#catcho_clo").click(function () {
+        $(".catcho").css('display','none');
+    })
+    $("#m_cloes").click(function () {
+        location.href = '/';
+    })
+    $("#event-main-pic").click(function () {
+        $(".modals").css('display','flex');
+    })
+    $("#modals_clo").click(function () {
+        $(".modals").css('display','none');
+    })
+    $(".modals_box img").click(function () {
+        var img = $(this).attr("src");
+        $("#event-main-pic img").attr("src",img);
+        $(".modals").css('display','none');
+    })
+
     
 })

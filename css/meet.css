@@ -6,9 +6,13 @@
 }
 .meet-main-title{
     padding: 20px;
-    color: var(--main-color);
+    color: #52e48d;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
+}
+.info-details img {
+    height: 200px;
 }
 .meet-main-title-keyword{
     display: inline;
@@ -202,4 +206,25 @@ appearance: none;
     -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+}
+.meet_box{
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 16%) -1px -1px 4px;
+}
+.box_button {
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    background: #52e48d;
+    border-radius: 30px;
+    font-size: 18px;
 }

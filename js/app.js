@@ -1,4 +1,20 @@
+
 $(function () {
+    document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+             event.preventDefault(); 
+           } 
+       }, false);
+    
+    var lastTouchEnd = 0; 
+    
+    document.documentElement.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+             event.preventDefault(); 
+           } lastTouchEnd = now; 
+       }, false);
+       
     $(".ht_button").click(function () {
         $(".list-box").toggleClass('open');
         $(".border_list").toggleClass('open');
@@ -37,9 +53,13 @@ $(function () {
     $("#choice_cat").click(function () {
         $(".catcho").css('display','flex');
     });
+    $("#choice_cat2").click(function () {
+        $(".catcho").css('display','flex');
+    });
     $(".catcho .catcho_box").click(function () {
         var cat = $(this).text();
         $("#choice_cat").text(cat);
+        $("#choice_cat2").text(cat);
         $(".catcho").css('display','none');
     });
     $("#catcho_clo").click(function () {

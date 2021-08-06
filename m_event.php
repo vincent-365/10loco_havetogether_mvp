@@ -1,7 +1,6 @@
 <?php
 
 include("./head.php");
-
 ?>
 <div class="meet-main-title">
      Have <div class="meet-main-title-keyword" id="choice_cat">Blank</div> Together
@@ -13,14 +12,18 @@ include("./head.php");
      </div>
      <div class="event-infos">
           <form action="">
-               <input type="text" name="" id="">
-               <select name="" id="">
-                    <option value="">Type of event</option>
-                    <option value="Meal">Meal</option>
-                    <option value="Coffee">Coffee</option>
-               </select>
-               <input type="date" name="" id="">
-               <input type="time" name="" id="" lang="">
+               <div class="form_boxs">
+                    <div><input type="text" name="" id="" placeholder="Event Name"></div>
+                    <div><div class="form_cat" id="choice_cat2">Type of event</div></div>
+               </div>
+               <div class="form_boxs">
+                    <div>
+                         <input type="date" name="" id="" placeholder="Date">
+                    </div>
+                    <div>
+                         <input type="time" name="" id="" lang="" placeholder="Time">
+                    </div>
+               </div>
                <div class="particpantsss">
                     <div>Participants (max)</div>
                     <div class="particpantsssbt">

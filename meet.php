@@ -29,7 +29,7 @@ if ($particpants < 3) {
 } else {
     $other = $particpants - 2;
     if ($other > 0) {
-        $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1] . $other . " other";
+        $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1] . " " . $other . " other";
     } else {
         $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1];
     }
@@ -40,9 +40,8 @@ if ($particpants < 3) {
 
 <div class="meet-container">
     <div class="report">
-        <div id="report-exit" style="    display: flex;
-    justify-content: flex-end;
-    padding: 10px;"><img src="./bin/img/Group 6197.svg" alt="" style="width: 40px;"></div>
+
+        <div id="report-exit" style="display: flex;justify-content: flex-end;padding: 10px;"><img src="./bin/img/Group 6197.svg" alt="" style="width: 40px;"></div>
         <div class="report-box">
             <div class="report-title">Report</div>
             <div class="report-subtitle">Thank you for reporting this person / event.
@@ -74,7 +73,8 @@ if ($particpants < 3) {
             <div class="meet-main-info-marginbox">
                 <div class="meet-title">
                     <div class="info-title"><? echo $event_name; ?></div>
-                    <div id="report"><img src="./bin/img/warning-sign.svg" alt="" style="width: 20px;margin-right: 10px;"></div>
+                    <!-- <div id="report"><i class="fas fa-share"></i></div> -->
+                    <div id="share-btn" onClick="sendLinkDefault();"><i class="fas fa-share"></i></div>
                 </div>
                 <div class="info-details">
                     <!--정보-->
@@ -113,13 +113,13 @@ if ($particpants < 3) {
         </div>
         <div class="meet_box">
             <div class="box_button">Let's Join</div>
-            <div class="box_button" id="share-btn"><i class="fas fa-share"></i></div>
         </div>
         <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         <script>
-            $(function() {
-                $('#share-btn').click(function() {
-                    Kakao.init('d9d73704ebd737b5760c728a51e9eff6')
+            try {
+                Kakao.init('d9d73704ebd737b5760c728a51e9eff6')
+
+                function sendLinkDefault() {
                     Kakao.Link.sendDefault({
                         objectType: 'feed',
                         content: {
@@ -139,8 +139,11 @@ if ($particpants < 3) {
                             },
                         }, ],
                     })
-                })
-            })
+                };
+                window.kakaoDemoCallback && window.kakaoDemoCallback()
+            } catch (e) {
+                window.kakaoDemoException && window.kakaoDemoException(e)
+            }
         </script>
     </div>
 </div>

@@ -72,7 +72,7 @@ $(function () {
         location.href = '/';
     })
     $("#event-main-pic").click(function () {
-        if (typeof(type) == "undefined") {
+        if (typeof (type) == "undefined") {
             alert("Please select Type")
         } else {
             var Api = "http://106.242.52.73/json/json.php?type=" + type;
@@ -97,14 +97,26 @@ $(function () {
         $(".modals").css('display', 'none');
         $("#modals_img").empty();
     })
+    var numbers = 0;
     $("#partnumber-plus").click(function () {
-        var numbers = parseInt($("#partnumber").text())
-        console.log(typeof(numbers));
-        console.log(numbers+=1);
+        if (numbers  > 3) {
+        } else {
+            numbers++
+            $("#partnumber").text(numbers);
+            $("#participants").val(numbers);
+        }
+    })
+    $("#partnumber-minus").click(function () {
+        if (numbers < 1) {
+        } else {
+            numbers--;
+            $("#partnumber").text(numbers);
+            $("#participants").val(numbers);
+        }
     })
 
     $(".box_button").click(function () {
-        $( "#target" ).submit();
+        $("#target").submit();
     })
     $(".organizer_img").click(function () {
         $(".profiles").css("display", "flex");
@@ -112,27 +124,36 @@ $(function () {
     $(".profiles").change(function () {
         $(".profiles").css("display", "none");
     })
+    $("#profiles_clo").click(function () {
+        $(".profiles").css('display', 'none');
+    })
+    $("#address").click(function () {
+        $("#mapsers").css('display', 'block');
+    })
+    $(".mapser_col").click(function () {
+        $("#mapsers").css('display', 'none');
+    })
     // 콘텐츠 수정 :: 사진 수정 시 이미지 미리보기
-	function readURL(input) {
-		if (input.files && input.files[0]) {
-			var reader = new FileReader();
-			reader.onload = function(e) {
-				$('.organizer_img img').attr('src', e.target.result); 
-			}
-			reader.readAsDataURL(input.files[0]);
-		}
-	}
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.organizer_img img').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
-	$(":input[name='profile']").change(function() {
-		if( $(":input[name='profile']").val() == '' ) {
-			$('.organizer_img img').attr('src' , '');  
-		}
-		$('#imgViewArea').css({ 'display' : '' });
-		readURL(this);
-	});
+    $(":input[name='profile']").change(function () {
+        if ($(":input[name='profile']").val() == '') {
+            $('.organizer_img img').attr('src', '');
+        }
+        $('#imgViewArea').css({ 'display': '' });
+        readURL(this);
+    });
 
-	// 이미지 에러 시 미리보기영역 미노출
-	function imgAreaError(){
-		$('.organizer_img img').css({ 'display' : 'none' });
-	}
+    // 이미지 에러 시 미리보기영역 미노출
+    function imgAreaError() {
+        $('.organizer_img img').css({ 'display': 'none' });
+    }
 })

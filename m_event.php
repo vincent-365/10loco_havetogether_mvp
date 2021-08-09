@@ -14,6 +14,7 @@ include("./head.php");
           <form action="upload.php" method="get" id="target">
                <input type="hidden" name="type" id="type">
                <input type="hidden" name="main_img" id="main_img">
+               <input type="hidden" name="participants" id="participants">
                <div class="form_boxs">
                     <div><input type="text" name="" id="" placeholder="Event Name"></div>
                     <div>
@@ -40,13 +41,14 @@ include("./head.php");
                <div class="event_img"><img src="./bin/img/picpic.png" alt=""></div>
                <div class="location-details"><textarea name="describe" id="describe" cols="40" rows="5" description="Describe the event" placeholder="Describe the event details"></textarea></div>
                <div class="event_titles">Location</div>
-               <div class="location-address"><input type="text" name="address" id="address" description="Address" placeholder="Address"></div>
+               <div class="location-address"><input type="text" name="address" id="address" description="Address" placeholder="Address" readonly></div>
                <div class="location-details"><textarea name="location" id="location" cols="40" rows="5" description="Location details" placeholder="Location details"></textarea></div>
                <div class="event_titles">Organizer</div>
                <div class="organizer_img"><img src="./bin/img/picpic.png" alt=""></div>
                <div class="location-address"><input type="text" name="name" id="name" description="Name" placeholder="Name"></div>
                <div class="location-details"><textarea name="organizerdet" id="organizerdet" cols="40" rows="5" description="Organizer details" placeholder="Organizer details"></textarea></div>
                <div class="profiles">
+                    <div id="profiles_clo"><i class="far fa-times-circle"></i></div>
                     <input type="file" name="profile" id="profile">
                </div>
           </form>
@@ -56,6 +58,19 @@ include("./head.php");
 <div class="meet_box">
      <div class="box_button">Let's Join</div>
 </div>
+<div id="mapsers">
+     <div id="mapser">
+          <div class="mapser_col"><i class="far fa-times-circle"></i></div>
+          <form onsubmit="searchPlaces(); return false;">
+               <input type="text" id="mapserss" placeholder="지도검색">
+               <button type="submit">지도검색</button>
+               <div id="search_maps">
+                    <div class="search_name"></div>
+                    <div class="search_address"></div>
+               </div>
+          </form>
+     </div>
+</div>
 <div class="catcho">
 
      <div id="catcho_clo"><i class="fas fa-times"></i></div>
@@ -64,7 +79,7 @@ include("./head.php");
 </div>
 <div class="modals">
      <div id="modals_clo"><i class="fas fa-times"></i></div>
-     <div style="width: 100vw;overflow: scroll;margin: 30px 0px;" id="modals_img">
+     <div id="modals_img">
      </div>
 </div>
 <?php

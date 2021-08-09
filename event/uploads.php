@@ -12,7 +12,7 @@ $location = $_GET['location'];
 $name = $_GET['name'];
 $organizerdet = $_GET['organizerdet'];
 $profile = $_GET['profile'];
-$file = $_FILES['file'];
+$file = $_GET['file'];
 
 print_r($file);
 

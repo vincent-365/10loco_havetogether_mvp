@@ -11,9 +11,8 @@ $address = $_GET['address'];
 $location = $_GET['location'];
 $name = $_GET['name'];
 $organizerdet = $_GET['organizerdet'];
-$profile = $_GET['profile'];
-$file = $_GET['file'];
+$profile = $_FILES['profile'];
 
-print_r($file);
+print_r($profile);
 
 ?>

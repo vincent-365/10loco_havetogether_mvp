@@ -57,7 +57,30 @@
     right: 10px;
     font-size: 40px;
 }
-
+.profiles{
+    position: fixed;
+    flex-direction: row;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 25px;
+}
+.organizer_img {
+    margin: 15px;
+    border-radius: 25px;
+    overflow: hidden;
+}
 .modals{
     position: fixed;
     flex-direction: row;
@@ -146,10 +169,13 @@
 }
 .event_img{
     text-align: center;
+    border-radius: 25px;
     margin-top: 10px;
+    overflow: hidden;
+    margin: 15px;
 }
 .event_img img{
-     width: 90%;
+     width: 100%;
 }
 .form_boxs{
     display: flex;
@@ -162,7 +188,7 @@
     width:40%;
 }
 
-.form_boxs input[type="text"],select,input[type="date"],input[type="time"],.form_cat{
+.form_boxs input[type="text"],select,input[type="date"],input[type="time"],.form_cat,input[type="number"]{
     width: 90% !important;
     border-radius: 25px;
     padding: 10px;
@@ -171,9 +197,7 @@
     font-size: 14px;
     text-align: left;
     color: #000;
-    -webkit-appearance: none;
-    -moz-appearance: none; 
-    appearance: none;
+    overflow: hidden;
 }
 input::placeholder,.form_cat{
     font-size: 14px;

@@ -11,39 +11,51 @@ include("./head.php");
           <img src="./bin/img/picpic2.png" alt="">
      </div>
      <div class="event-infos">
-          <form action="">
+          <form action="upload.php" method="get" id="target">
+               <input type="hidden" name="type" id="type">
+               <input type="hidden" name="main_img" id="main_img">
                <div class="form_boxs">
                     <div><input type="text" name="" id="" placeholder="Event Name"></div>
-                    <div><div class="form_cat" id="choice_cat2">Type of event</div></div>
+                    <div>
+                         <div class="form_cat" id="choice_cat2">Type of event</div>
+                    </div>
                </div>
                <div class="form_boxs">
                     <div>
-                         <input type="date" name="" id="" placeholder="Date">
+                         <input type="date" name="date" id="date" placeholder="Date">
                     </div>
                     <div>
-                         <input type="time" name="" id="" lang="" placeholder="Time">
+                         <input type="time" name="time" id="time" lang="" placeholder="Time">
                     </div>
                </div>
                <div class="particpantsss">
                     <div>Participants (max)</div>
                     <div class="particpantsssbt">
-                         <div id="partnumber-minus"><i class="far fa-minus-square"></i></div>
-                         <div id="partnumber">0</div>
-                         <div id="partnumber-plus"><i class="far fa-plus-square"></i></div>
+                         <div id="partnumber-minus" style="color:#52E48D"><i class="far fa-minus-square"></i></div>
+                         <div id="partnumber" style="color:#52E48D">0</div>
+                         <div id="partnumber-plus" style="color:#52E48D"><i class="far fa-plus-square"></i></div>
                     </div>
                </div>
+               <div class="event_titles">Let's have</div>
+               <div class="event_img"><img src="./bin/img/picpic.png" alt=""></div>
+               <div class="location-details"><textarea name="describe" id="describe" cols="40" rows="5" description="Describe the event" placeholder="Describe the event details"></textarea></div>
+               <div class="event_titles">Location</div>
+               <div class="location-address"><input type="text" name="address" id="address" description="Address" placeholder="Address"></div>
+               <div class="location-details"><textarea name="location" id="location" cols="40" rows="5" description="Location details" placeholder="Location details"></textarea></div>
+               <div class="event_titles">Organizer</div>
+               <div class="organizer_img"><img src="./bin/img/picpic.png" alt=""></div>
+               <div class="location-address"><input type="text" name="name" id="name" description="Name" placeholder="Name"></div>
+               <div class="location-details"><textarea name="organizerdet" id="organizerdet" cols="40" rows="5" description="Organizer details" placeholder="Organizer details"></textarea></div>
+               <div class="profiles">
+                    <input type="file" name="profile" id="profile">
+               </div>
           </form>
-          <div class="event_titles">Let's have</div>
-          <div class="event_img"><img src="./bin/img/picpic.png" alt=""></div>
-          <div class="location-details"><textarea name="" id="" cols="40" rows="5" description="Describe the event" placeholder="Describe the event details"></textarea></div>
-          <div class="event_titles">Location</div>
-          <div class="location-address"><input type="text" name="" id="" description="Address" placeholder="Address"></div>
-          <div class="location-details"><textarea name="" id="" cols="40" rows="5" description="Location details" placeholder="Location details"></textarea></div>
-
      </div>
 </div>
 
-
+<div class="meet_box">
+     <div class="box_button">Let's Join</div>
+</div>
 <div class="catcho">
 
      <div id="catcho_clo"><i class="fas fa-times"></i></div>
@@ -52,17 +64,7 @@ include("./head.php");
 </div>
 <div class="modals">
      <div id="modals_clo"><i class="fas fa-times"></i></div>
-     <div style="width: 100vw;overflow: scroll;margin: 30px 0px;">
-          <div class="modals_box"><img src="https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1428&q=80" alt=""></div>
-          <div class="modals_box"><img src="https://images.unsplash.com/photo-1627662236865-75ef4bba23a0?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
-          <div class="modals_box"><img src="./bin/img/picpic2.png" alt=""></div>
+     <div style="width: 100vw;overflow: scroll;margin: 30px 0px;" id="modals_img">
      </div>
 </div>
 <?php

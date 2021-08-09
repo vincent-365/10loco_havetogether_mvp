@@ -1,7 +1,5 @@
 <?php
-
 include("./head.php");
-
 ?>
 
 <div id="map"></div>
@@ -14,7 +12,5 @@ include("./head.php");
     </div>
 </div>
 <?php
-
 include("./footer.php");
-
 ?>

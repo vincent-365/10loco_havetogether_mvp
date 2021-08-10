@@ -32,7 +32,7 @@ if (isset($_FILES)) {
         $temp = explode(".", $name);
         $extension = end($temp);
        
-        if ( ($size/1024/1024) < 2. && in_array($extension, $allowedExts) ) {
+        if ( ($size/1024/1024) < 10. && in_array($extension, $allowedExts) ) {
             if (file_exists("../upload/" . $name)) {
                 echo $name . " already exists. ";
             }

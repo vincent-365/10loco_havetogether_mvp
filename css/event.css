@@ -220,9 +220,8 @@ div#mapser{
     align-items: center;
     transform: translate(-50%,-50%);
     text-align: center;
-    padding: 30px;
+    padding: 50px 30px;
     border-radius: 25px;
-    padding-top: 50px;
 }
 #mapsers {
     width: 100%;
@@ -280,4 +279,21 @@ input[type="time"]::before{
 }
 input[type="time"]:focus::before,input[type="time"]:valid::before{
     display: none;
+}
+div#search_maps {
+    height: 400px;
+    overflow: scroll;
+}
+.idsbox {
+    margin: 10px 0px;
+    border: 1px solid #adadad;
+    padding: 10px 0px;
+}
+
+.search_address {
+    margin: 10px;
+}
+
+.search_name {
+    margin: 10px;
 }

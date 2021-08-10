@@ -15,6 +15,8 @@ include("./head.php");
                <input type="hidden" name="type" id="type">
                <input type="hidden" name="main_img" id="main_img">
                <input type="hidden" name="participants" id="participants">
+               <input type="hidden" name="event_x" id="event_x">
+               <input type="hidden" name="event_y" id="event_y">
                <div class="form_boxs">
                     <div><input type="text" name="" id="" placeholder="Event Name"></div>
                     <div>
@@ -65,8 +67,6 @@ include("./head.php");
                <input type="text" id="mapserss" placeholder="지도검색">
                <button type="submit">지도검색</button>
                <div id="search_maps">
-                    <div class="search_name"></div>
-                    <div class="search_address"></div>
                </div>
           </form>
      </div>

@@ -133,6 +133,9 @@ $(function () {
     $(".mapser_col").click(function () {
         $("#mapsers").css('display', 'none');
     })
+    $("#mapserss").click(function () {
+        $("#mapserss").val('');
+    })
     // 콘텐츠 수정 :: 사진 수정 시 이미지 미리보기
     function readURL(input) {
         if (input.files && input.files[0]) {

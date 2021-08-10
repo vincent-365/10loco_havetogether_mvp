@@ -297,3 +297,7 @@ div#search_maps {
 .search_name {
     margin: 10px;
 }
+#share-btn{
+    color: #52E48D;
+    font-size: 30px;
+}

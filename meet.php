@@ -82,7 +82,7 @@ if ($particpants < 3) {
                 <div class="meet-title">
                     <div class="info-title"><? echo $event_name; ?></div>
                     <!-- <div id="report"><i class="fas fa-share"></i></div> -->
-                    <div id="share-btn" onClick="sendLinkDefault();"><i class="fas fa-share"></i></div>
+                    <div id="share-btn" onClick="sendLinkDefault();"><i class="fas fa-share-alt"></i></div>
                 </div>
                 <div class="info-details">
                     <!--정보-->

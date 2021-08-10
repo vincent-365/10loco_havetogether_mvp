@@ -24,7 +24,7 @@ $organizer_name = $row["organizer_name"];
 $organizer_details = $row["organizer_details"];
 $xy = $location_y.",".$location_x;
 //참가자 정보
-$event_particpants  = $row["event_particpants"];
+$event_particpants  = $row["event_part_pel"];
 $event_particpants_pur = explode(",", $event_particpants);
 $particpants = count($event_particpants_pur);
 

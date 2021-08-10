@@ -51,10 +51,10 @@ else {
     echo "File is not selected";
 }
 
-$sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `time`, `event_participants`, `main_img`, `event_details`, `event_location`, `location_x`, `location_y`, `location_details`, `event_organizer`, `organizer_name`, `organizer_details`) VALUES ('0','$event_name','$event_type','$event_date','$event_time','$event_particpants','$event_main_img','$event_event_details','$event_location','$event_x','$event_y','$event_loc_details','$event_organizer','$event_org_name','$event_org_details')";
+$sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `time`, `event_participants`,`event_part_pel`, `main_img`, `event_details`, `event_location`, `location_x`, `location_y`, `location_details`, `event_organizer`, `organizer_name`, `organizer_details`) VALUES ('0','$event_name','$event_type','$event_date','$event_time','$event_particpants','','$event_main_img','$event_event_details','$event_location','$event_x','$event_y','$event_loc_details','$event_organizer','$event_org_name','$event_org_details')";
 
 $result = $havetohere_db->query($sql);
 print_r(mysqli_insert_id($havetohere_db));
 
-header('Location: http://106.242.52.73/meet.php?id='.mysqli_insert_id($havetohere_db));
+header('Location: meet.php?id='.mysqli_insert_id($havetohere_db));
 ?>

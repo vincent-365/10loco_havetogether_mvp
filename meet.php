@@ -133,7 +133,7 @@ if ($particpants < 3) {
                     Kakao.Link.sendDefault({
                         objectType: 'feed',
                         content: {
-                            title: 'Have <? echo $event_name; ?> Together',
+                            title: 'Have <? echo $event_type; ?> Together',
                             description: '<? echo $event_details; ?>',
                             imageUrl: '<? echo "https://havetogether.com/".$main_img; ?>',
                             link: {

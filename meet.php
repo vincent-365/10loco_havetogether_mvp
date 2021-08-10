@@ -135,17 +135,17 @@ if ($particpants < 3) {
                         content: {
                             title: 'Have <? echo $event_name; ?> Together',
                             description: '<? echo $event_details; ?>',
-                            imageUrl: '<? echo "http://106.242.52.73/".$main_img; ?>',
+                            imageUrl: '<? echo "https://havetogether.com/".$main_img; ?>',
                             link: {
-                                mobileWebUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',
-                                webUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',
+                                mobileWebUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
+                                webUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
                             },
                         },
                         buttons: [{
                             title: '약속잡기',
                             link: {
-                                mobileWebUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',
-                                webUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',
+                                mobileWebUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
+                                webUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
                             },
                         }, ],
                     })

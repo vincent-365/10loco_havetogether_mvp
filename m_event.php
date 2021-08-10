@@ -11,14 +11,14 @@ include("./head.php");
           <img src="./bin/img/picpic2.png" alt="">
      </div>
      <div class="event-infos">
-          <form action="upload.php" method="get" id="target">
+          <form action="./event/uploads.php" method="get" id="target" enctype="multipart/form-data">
                <input type="hidden" name="type" id="type">
                <input type="hidden" name="main_img" id="main_img">
                <input type="hidden" name="participants" id="participants">
                <input type="hidden" name="event_x" id="event_x">
                <input type="hidden" name="event_y" id="event_y">
                <div class="form_boxs">
-                    <div><input type="text" name="" id="" placeholder="Event Name"></div>
+                    <div><input type="text" name="event_naem" id="event_naem" placeholder="Event Name"></div>
                     <div>
                          <div class="form_cat" id="choice_cat2">Type of event</div>
                     </div>

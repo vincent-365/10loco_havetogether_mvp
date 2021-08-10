@@ -19,15 +19,15 @@ $event_org_details = $_POST['organizerdet'];
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 if (isset($_FILES)) {
     $file = $_FILES["profile"];
-    echo $file;
+    print_R($file);
     $error = $file["error"];
-    echo $error;
+    print_R($error);
     $name = $file["name"];
-    echo $name;
+    print_R($name);
     $type = $file["type"];
-    echo $type;
+    print_R($type);
     $size = $file["size"];
-    echo $size;
+    print_R($size);
     $tmp_name = $file["tmp_name"];
    
     if ( $error > 0 ) {

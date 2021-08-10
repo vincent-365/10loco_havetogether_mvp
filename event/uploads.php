@@ -56,5 +56,5 @@ $sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `
 $result = $havetohere_db->query($sql);
 print_r(mysqli_insert_id($havetohere_db));
 
-header('Location: meet.php?id='.mysqli_insert_id($havetohere_db));
+header('Location: /meet.php?id='.mysqli_insert_id($havetohere_db));
 ?>

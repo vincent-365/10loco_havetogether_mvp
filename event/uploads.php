@@ -36,11 +36,12 @@ if (isset($_FILES)) {
     else {
         $temp = explode(".", $name);
         $extension = end($temp);
-       
+        $event_organizer = "../upload/" . $name;
         if ( ($size/1024/1024) < 10. && in_array($extension, $allowedExts) ) {
             if (file_exists("../upload/" . $name)) {
                 echo $name . " already exists. ";
-            }
+                $event_organizer = "../upload/" . $name;
+              }
             else {
                 move_uploaded_file($tmp_name, "../upload/" . $name);
                 $event_organizer = "../upload/" . $name;

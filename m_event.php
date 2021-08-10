@@ -11,7 +11,7 @@ include("./head.php");
           <img src="./bin/img/picpic2.png" alt="">
      </div>
      <div class="event-infos">
-          <form action="./event/uploads.php" method="get" id="target" enctype="multipart/form-data">
+          <form action="./event/uploads.php" method="post" id="target" enctype="multipart/form-data">
                <input type="hidden" name="type" id="type">
                <input type="hidden" name="main_img" id="main_img">
                <input type="hidden" name="participants" id="participants">

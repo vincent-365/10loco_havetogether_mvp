@@ -3,18 +3,26 @@ include("./head.php");
 
 $id = $_GET["id"];
 
-$query = "SELECT * FROM ht_event WHERE event_id = $id;
-";
+$query = "SELECT * FROM ht_event WHERE event_id = $id";
 $result = $havetohere_db->query($query);
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
 
 $event_name = $row["event_name"];
-$event_category = $row["event_category"];
-$event_info_img = $row["event_info_img"];
-$event_info = $row["event_info"];
-$location = $row["event_location"];
-
+$event_type = $row["event_type"];
+$date = $row["date"];
+$time = $row["time"];
+$event_participants = $row["event_participants"];
+$main_img = $row["main_img"];
+$event_details = $row["event_details"];
+$event_location = $row["event_location"];
+$location_x = $row["location_x"];
+$location_y = $row["location_y"];
+$location_details = $row["location_details"];
+$event_organizer = $row["event_organizer"];
+$organizer_name = $row["organizer_name"];
+$organizer_details = $row["organizer_details"];
+$xy = $location_y.",".$location_x;
 //참가자 정보
 $event_particpants  = $row["event_particpants"];
 $event_particpants_pur = explode(",", $event_particpants);
@@ -63,11 +71,11 @@ if ($particpants < 3) {
         </div>
     </div>
     <div class="meet-main-title">
-        Have <div class="meet-main-title-keyword"><? echo $event_category; ?></div> Together
+        Have <div class="meet-main-title-keyword"><? echo $event_type; ?></div> Together
     </div>
     <div class="meet-con-box">
         <div class="meet-bg-img">
-            <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <img src="<? echo $main_img ?>" alt="">
         </div>
         <div class="meet-main-info-box">
             <div class="meet-main-info-marginbox">
@@ -79,19 +87,19 @@ if ($particpants < 3) {
                 <div class="info-details">
                     <!--정보-->
                     <div class="info-boxs">
-                        <div class="details-title">The <? echo $event_category; ?> </div>
+                        <div class="details-title">The <? echo $event_type; ?> </div>
                         <div class="organizer-img">
-                            <img src="<? echo $event_info_img; ?>" alt="">
+                            <img src="<? echo $main_img ?>" alt="">
                         </div>
-                        <div class="info-text"><? echo $event_info; ?></div>
+                        <div class="info-text"><? echo $event_details; ?></div>
                     </div>
                 </div>
                 <div class="info-boxs">
-                    <div class="details-title">Name</div>
+                    <div class="details-title"><? echo $organizer_name; ?></div>
                     <div class="organizer-img">
-                        <img src="https://images.unsplash.com/photo-1564931941481-cb07951e9f2f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+                        <img src="<? echo $event_organizer ?>" alt="">
                     </div>
-                    <div class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed interdum libero, ut elementum velit. Sed congue ante accumsan, faucibus.</div>
+                    <div class="info-text"><? echo $organizer_details; ?></div>
                 </div>
                 <!--참가자-->
                 <div class="info-boxs">
@@ -104,9 +112,11 @@ if ($particpants < 3) {
                     </div> -->
                 </div>
                 <!--주소-->
-                <input type="hidden" name="location" id="location" value="<?php echo $location; ?>">
+                <input type="hidden" name="location" id="location" value="<?php echo $xy; ?>">
                 <div class="info-boxs" style="margin-bottom: 5px;">
                     <div class="details-title">Location</div>
+                    <div class="info-text"><? echo $event_location; ?></div>
+                    <div class="info-text"><? echo $location_details; ?></div>
                     <div id="staticMap"></div>
                 </div>
             </div>
@@ -123,9 +133,9 @@ if ($particpants < 3) {
                     Kakao.Link.sendDefault({
                         objectType: 'feed',
                         content: {
-                            title: 'Have <? echo $event_category; ?> Together',
-                            description: '<? echo $event_info; ?>',
-                            imageUrl: '<? echo $event_info_img; ?>',
+                            title: 'Have <? echo $event_name; ?> Together',
+                            description: '<? echo $event_details; ?>',
+                            imageUrl: '<? echo "http://106.242.52.73/".$main_img; ?>',
                             link: {
                                 mobileWebUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',
                                 webUrl: 'http://106.242.52.73/meet.php?id=<? echo $id; ?>',

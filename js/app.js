@@ -75,7 +75,7 @@ $(function () {
         if (typeof (type) == "undefined") {
             alert("Please select Type")
         } else {
-            var Api = "https://havetogether.com/json/json.php?type=" + type;
+            var Api = "json/json.php?type=" + type;
             $.getJSON(Api, function (json) {
                 $.each(json, function (key, value) {
                     var div = $("<div>").attr("class", "modals_box").appendTo("#modals_img");

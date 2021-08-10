@@ -1,5 +1,5 @@
 <?php
-include './data/dbconfig.php'
+include 'data/dbconfig.php'
 ?>
 
 <!DOCTYPE html>

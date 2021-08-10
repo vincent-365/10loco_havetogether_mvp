@@ -1,35 +1,60 @@
 <?php
+include("../head.php");
 
-$type = $_GET['type'];
-$main_img = $_GET['main_img'];
-$participants = $_GET['participants'];
-$event_naem = $_GET['event_naem'];
-$date = $_GET['date'];
-$time = $_GET['time'];
-$describe = $_GET['describe'];
-$address = $_GET['address'];
-$location = $_GET['location'];
-$name = $_GET['name'];
-$organizerdet = $_GET['organizerdet'];
-$file = $_FILES["profile"];
+$event_name = $_POST['event_naem'];
+$event_type = $_POST['type'];
+$event_date = $_POST['date'];
+$event_time = $_POST['time'];
+$event_particpants = $_POST['participants'];
+$event_main_img = $_POST['main_img'];
+$event_event_details = $_POST['describe'];
+$event_location = $_POST['address'];
+$event_x = $_POST['event_x'];
+$event_y = $_POST['event_y'];
+$event_loc_details = $_POST['location'];
+$event_org_name = $_POST['name'];
+$event_org_details = $_POST['organizerdet'];
 
-print_r($profile);
 
-?>
-<?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["profile"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["profile"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
-  }
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+if (isset($_FILES)) {
+    $file = $_FILES["profile"];
+    $error = $file["error"];
+    $name = $file["name"];
+    $type = $file["type"];
+    $size = $file["size"];
+    $tmp_name = $file["tmp_name"];
+   
+    if ( $error > 0 ) {
+        echo "Error: " . $error . "<br>";
+    }
+    else {
+        $temp = explode(".", $name);
+        $extension = end($temp);
+       
+        if ( ($size/1024/1024) < 2. && in_array($extension, $allowedExts) ) {
+            if (file_exists("../upload/" . $name)) {
+                echo $name . " already exists. ";
+            }
+            else {
+                move_uploaded_file($tmp_name, "../upload/" . $name);
+                $event_organizer = "../upload/" . $name;
+            }
+        }
+        else {
+            echo ($size/1024/1024) . " Mbyte is bigger than 2 Mb ";
+            echo $extension . "format file is not allowed to upload ! ";
+        }
+    }
 }
+else {
+    echo "File is not selected";
+}
+
+$sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `time`, `event_participants`, `main_img`, `event_details`, `event_location`, `location_x`, `location_y`, `location_details`, `event_organizer`, `organizer_name`, `organizer_details`) VALUES ('0','$event_name','$event_type','$event_date','$event_time','$event_particpants','$event_main_img','$event_event_details','$event_location','$event_x','$event_y','$event_loc_details','$event_organizer','$event_org_name','$event_org_details')";
+
+$result = $havetohere_db->query($sql);
+print_r(mysqli_insert_id($havetohere_db));
+
+header('Location: http://106.242.52.73/meet.php?id='.mysqli_insert_id($havetohere_db));
 ?>

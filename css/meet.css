@@ -1,9 +1,107 @@
-:root {
-    --main-color: #52E48D;
-  }
-.meet-container{
-  background: #EFEFEF;
+:root{
+    --space : 15px;
+    --radius : 25px;
+
+    --font-big : 20px;
+    
+
+    --main-color : #52E48D;
+    --text-color : #000;
 }
+
+.meet-container{
+    
+}
+.meet-container .top-box {
+    padding: var(--space);
+    text-align: center;
+    font-weight: bold;
+}
+.meet-container .top-box .title {
+    font-size: var(--font-big);
+    color: var(--main-color);
+}
+.meet-container .top-box .title strong {
+    font-size: var(--font-big);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+.meet-container .info {
+    margin: 5px 15px;
+    position: relative;
+    padding-bottom: 200px;
+    margin-bottom: 80px;
+}
+.meet-container .info .m-title {
+    font-size: 30px;
+    width: 90%;
+    overflow-wrap: break-word;
+    font-weight: bold;
+}
+
+.meet-container .info .main-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.meet-container .info .main-img{
+    position: absolute;
+    width: 100%;
+}
+.meet-container .info .main-img img {
+    border-radius: var(--radius);
+    width: 100%;
+    height: 300px;
+}
+.meet-container .info .meet-info {
+    background: #fff;
+    padding: 15px;
+    position: relative;
+    top: 200px;
+    border-radius: 25px;
+}
+.meet-container .info .meet-info .info-title {
+    font-size: var(--font-big);
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.meet-container .info .meet-info .info-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.meet-container .info .meet-info .info-text strong {
+    color: var(--main-color);
+}
+.meet-container .info .meet-info .icon {
+    display: inline-block;
+    padding: 6px;
+    color: var(--main-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+}
+.meet-container .info .meet-info .info-img {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0px;
+}
+.meet-container .info .meet-info .info-img img{
+    border-radius: 25px;
+}
+
+
 .meet-main-title{
     padding: 20px;
     color: #52e48d;
@@ -19,195 +117,7 @@
     color: #000;
     margin: 0px 5px;
 }
-.meet-con-box{
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 0px 20px;
-    position: relative;
-}
-.meet-bg-img{
-    position: relative;
-    height: 350px;
-}
-.meet-bg-img img{
-    position: absolute;
-}
-.meet-bg-info{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    color: #fff;
-}
-.meet-main-info-box{
-    position: relative;
-    background: #fff;
-    z-index: 998;
-    top: -50px;
-    border-radius: 25px;
-}
-.meet-main-info-marginbox{
-    padding: 20px;
-}
-.meet-title{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-}
-.info-title{
-    font-size:30px;
-    font-weight: bold;
-}
-.subinfo {
-    display: flex;
-    margin: 10px 0px;
-    color: #52E48D;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    text-transform :uppercase;
-    font-size: 13px;
-}
-.box-sizer{
-    width:80px;
-}
-.subinfo-icon{
-    -webkit-box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-    padding: 10px;
-    border-radius: 100px;
-    font-size: 30px;
-    margin-bottom: 11px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-}
-.subinfo-icon img{
-    width: 80%;
-    height: 80%;
-    filter: invert(69%) sepia(66%) saturate(360%) hue-rotate(90deg) brightness(96%) contrast(97%);
-}
-.subinfo-info{
-    color:#000;
-}
-#staticMap{
-    height:200px;
-    border-radius:25px;
-}
-
-.details-info{
-    margin: 35px 0px !important;
-}
-.details-title{
-    font-size: 18px;
-    font-weight: 500;
-    margin: 15px 0px !important;
-}
-.details-title-details{
-    font-size: 13px;
-    display: inline;
-    color: #52E48D;
-}
-.organizer-img{
-    border-radius: 25px;
-    overflow: hidden;
-}
-.info-text{
-    font-size: 14px;
-    font-weight: 400;
-    margin: 10px 0px !important;
-    padding: 0px 10px;
-}
-.info-text strong{
-    color:var(--main-color)
-}
-.particpants{
-    display:flex;
-}
-.test img{
-    width: 80px;
-    height: 80px;
-    border-radius: 100px;
-}
-.test:not(:first-child){
-    margin-left: -30px;
-}
-.info-boxs{
-    margin: 40px 0px;
-}
-.report{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1999;
-    background: #EFEFEF;
-    display:none;
-}
-
-.report-box{
-    margin: 5px 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.report-title{
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-.report-subtitle{
-    font-size:14px;
-    font-weight:300
-}
-
-.report input[type="submit"] {
-    padding: 10px 30px;
-    margin: 20px;
-    border: none;
-    background: #52E48D;
-    border-radius: 25px;
-    font-weight: bold;
-    -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-.report select {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    margin: 20px 0px;
-    -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-.report textarea {
-    display: block;
-    width: 100%;
-    border: 1px solid #ddd;
-    -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-.report label {
-    margin: 20px;
-    padding: 20px;
-    padding-bottom: 0px;
-    display: block;
-    color: #797979;
-    -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-}
-.meet_box{
+.meet-box{
     background: #fff;
     position: fixed;
     bottom: 0;
@@ -220,7 +130,7 @@ appearance: none;
     align-items: center;
     box-shadow: rgb(0 0 0 / 16%) -1px -1px 4px;
 }
-.box_button {
+.box-button {
     color: #fff;
     padding: 10px 50px;
     text-align: center;

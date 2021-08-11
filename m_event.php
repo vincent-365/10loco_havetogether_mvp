@@ -57,8 +57,8 @@ include("./head.php");
      </div>
 </div>
 
-<div class="meet_box">
-     <div class="box_button">Let's Join</div>
+<div class="meet-box">
+     <div class="box-button">Let's Join</div>
 </div>
 <div id="mapsers">
      <div id="mapser">

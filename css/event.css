@@ -206,6 +206,13 @@
     position: absolute;
     font-size: 25px;
 }
+#join-col{
+    color: #52E48D;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    font-size: 25px;
+}
 div#mapser{
     position: fixed;
     flex-direction: row;

@@ -14,20 +14,16 @@ $event_y = $_POST['event_y'];
 $event_loc_details = $_POST['location'];
 $event_org_name = $_POST['name'];
 $event_org_details = $_POST['organizerdet'];
+$event_org_name_2 = $event_org_name+",";
 
 
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 if (isset($_FILES)) {
     $file = $_FILES["profile"];
-    print_R($file);
     $error = $file["error"];
-    print_R($error);
     $name = $file["name"];
-    print_R($name);
     $type = $file["type"];
-    print_R($type);
     $size = $file["size"];
-    print_R($size);
     $tmp_name = $file["tmp_name"];
    
     if ( $error > 0 ) {
@@ -39,7 +35,6 @@ if (isset($_FILES)) {
         $event_organizer = "../upload/" . $name;
         if ( ($size/1024/1024) < 10. && in_array($extension, $allowedExts) ) {
             if (file_exists("../upload/" . $name)) {
-                echo $name . " already exists. ";
                 $event_organizer = "../upload/" . $name;
               }
             else {
@@ -57,7 +52,7 @@ else {
     echo "File is not selected";
 }
 
-$sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `time`, `event_participants`,`event_part_pel`, `main_img`, `event_details`, `event_location`, `location_x`, `location_y`, `location_details`, `event_organizer`, `organizer_name`, `organizer_details`) VALUES ('0','$event_name','$event_type','$event_date','$event_time','$event_particpants','','$event_main_img','$event_event_details','$event_location','$event_x','$event_y','$event_loc_details','$event_organizer','$event_org_name','$event_org_details')";
+$sql = "INSERT INTO `ht_event`(`event_id`, `event_name`, `event_type`, `date`, `time`, `event_participants`,`event_part_pel`, `main_img`, `event_details`, `event_location`, `location_x`, `location_y`, `location_details`, `event_organizer`, `organizer_name`, `organizer_details`) VALUES ('0','$event_name','$event_type','$event_date','$event_time','$event_particpants','$event_org_name_2','$event_main_img','$event_event_details','$event_location','$event_x','$event_y','$event_loc_details','$event_organizer','$event_org_name','$event_org_details')";
 
 $result = $havetohere_db->query($sql);
 print_r(mysqli_insert_id($havetohere_db));

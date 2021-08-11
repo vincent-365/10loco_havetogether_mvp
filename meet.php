@@ -3,6 +3,8 @@ include("./head.php");
 
 $id = $_GET["id"];
 
+$hostname = $_SERVER["HTTP_HOST"];
+
 $query = "SELECT * FROM ht_event WHERE event_id = $id";
 $result = $havetohere_db->query($query);
 
@@ -22,7 +24,11 @@ $location_details = $row["location_details"];
 $event_organizer = $row["event_organizer"];
 $organizer_name = $row["organizer_name"];
 $organizer_details = $row["organizer_details"];
-$xy = $location_y.",".$location_x;
+$xy = $location_y . "," . $location_x;
+$date2=date_create($date);
+$time2 = date_create($time);
+$dates = date_format($date2,"m-d");
+$times = date_format($time2,"H:i");
 //참가자 정보
 $event_particpants  = $row["event_part_pel"];
 $event_particpants_pur = explode(",", $event_particpants);
@@ -30,136 +36,196 @@ $particpants = count($event_particpants_pur);
 
 if ($particpants < 3) {
     if ($particpants == 1) {
-        $particpants_info = "including ," . $event_particpants_pur[0];
+        $particpants_info = "including , " . $event_particpants_pur[0];
     } else {
-        $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1];
+        $particpants_info = "including , " . $event_particpants_pur[0] . " and " . $event_particpants_pur[1];
     }
 } else {
     $other = $particpants - 2;
     if ($other > 0) {
-        $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1] . " " . $other . " other";
+        $particpants_info = "including , " . $event_particpants_pur[0] . " and " . $event_particpants_pur[1] . " " . $other . " other";
     } else {
-        $particpants_info = "including ," . $event_particpants_pur[0] . " and " . $event_particpants_pur[1];
+        $particpants_info = "including , " . $event_particpants_pur[0] . " and " . $event_particpants_pur[1];
     }
 }
 ?>
+<style>
+    .info-da {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
+    .info-icons {
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50%;
+        -webkit-box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+        box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+        text-align: center;
+    }
 
-
+    .info-icons {
+        font-size: 30px;
+        color: var(--main-color);
+        margin: 15px auto;
+    }
+</style>
 <div class="meet-container">
-    <div class="report">
-
-        <div id="report-exit" style="display: flex;justify-content: flex-end;padding: 10px;"><img src="./bin/img/Group 6197.svg" alt="" style="width: 40px;"></div>
-        <div class="report-box">
-            <div class="report-title">Report</div>
-            <div class="report-subtitle">Thank you for reporting this person / event.
-                </br></br>
-                Please precise the reason of your report.
-                We will take a decision based on these information
-                and external information.
+    <div class="top-box">
+        <div class="title">Have <strong><?php echo $event_type; ?></strong> Together</div>
+    </div>
+    <div class="info">
+        <div class="main-img">
+            <img src="<?php echo $main_img; ?>" alt="<?php echo $event_name; ?>">
+        </div>
+        <div class="meet-info">
+            <!-- main-title -->
+            <div class="main-title">
+                <div class="m-title"><? echo $event_name; ?></div>
+                <div id="share-btn" onClick="sendLinkDefault();"><i class="fas fa-share-alt"></i></div>
             </div>
-            <form action="">
-                <input type="hidden" name="">
-                <select name="order" form="myForm">
-                    <option value="" disabled selected>Reason of the report</option>
-                    <option value="americano">아메리카노</option>
-                </select>
-                <label for="">Message</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="SEND">
-            </form>
-        </div>
-    </div>
-    <div class="meet-main-title">
-        Have <div class="meet-main-title-keyword"><? echo $event_type; ?></div> Together
-    </div>
-    <div class="meet-con-box">
-        <div class="meet-bg-img">
-            <img src="<? echo $main_img ?>" alt="">
-        </div>
-        <div class="meet-main-info-box">
-            <div class="meet-main-info-marginbox">
-                <div class="meet-title">
-                    <div class="info-title"><? echo $event_name; ?></div>
-                    <!-- <div id="report"><i class="fas fa-share"></i></div> -->
-                    <div id="share-btn" onClick="sendLinkDefault();"><i class="fas fa-share-alt"></i></div>
+            <!-- main-title -->
+
+            <div class="info-da">
+                <div class="info-bbox">
+                    <div class="info-icons"><i class="fas fa-calendar-week"></i></div>
+                    <div><?php echo $dates; ?></div>
                 </div>
-                <div class="info-details">
-                    <!--정보-->
-                    <div class="info-boxs">
-                        <div class="details-title">The <? echo $event_type; ?> </div>
-                        <div class="organizer-img">
-                            <img src="<? echo $main_img ?>" alt="">
-                        </div>
-                        <div class="info-text"><? echo $event_details; ?></div>
-                    </div>
+                <div class="info-bbox">
+                    <div class="info-icons"><i class="fas fa-calendar-week"></i></div>
+                    <div><?php echo $times; ?></div>
                 </div>
-                <div class="info-boxs">
-                    <div class="details-title"><? echo $organizer_name; ?></div>
-                    <div class="organizer-img">
-                        <img src="<? echo $event_organizer ?>" alt="">
-                    </div>
-                    <div class="info-text"><? echo $organizer_details; ?></div>
-                </div>
-                <!--참가자-->
-                <div class="info-boxs">
-                    <div class="details-title">Particpants</div>
-                    <div class="info-text"><strong><? echo $particpants; ?> particpants</strong> <? echo $particpants_info; ?></div>
-                    <!-- <div class="particpants">
-                        <div class="test"><img src="https:\/\/uifaces.co\/our-content\/donated\/KOSDadHu.jpg" alt=""></div>
-                        <div class="test"><img src="https:\/\/images.pexels.com\/photos\/415829\/pexels-photo-415829.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb" alt=""></div>
-                        <div class="test"><img src="https:\/\/i.imgur.com\/D01FNwR.jpg" alt=""></div>
-                    </div> -->
-                </div>
-                <!--주소-->
-                <input type="hidden" name="location" id="location" value="<?php echo $xy; ?>">
-                <div class="info-boxs" style="margin-bottom: 5px;">
-                    <div class="details-title">Location</div>
-                    <div class="info-text"><? echo $event_location; ?></div>
-                    <div class="info-text"><? echo $location_details; ?></div>
-                    <div id="staticMap"></div>
+                <div class="info-bbox">
+                    <div class="info-icons"><i class="far fa-handshake"></i></div>
+                    <div><?php echo $particpants . "/" . $event_participants; ?></div>
                 </div>
             </div>
-        </div>
-        <div class="meet_box">
-            <div class="box_button">Let's Join</div>
-        </div>
-        <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <script>
-            try {
-                Kakao.init('d9d73704ebd737b5760c728a51e9eff6')
 
-                function sendLinkDefault() {
-                    Kakao.Link.sendDefault({
-                        objectType: 'feed',
-                        content: {
-                            title: 'Have <? echo $event_type; ?> Together',
-                            description: '<? echo $event_details; ?>',
-                            imageUrl: '<? echo "https://havetogether.com/".$main_img; ?>',
-                            link: {
-                                mobileWebUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
-                                webUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
-                            },
-                        },
-                        buttons: [{
-                            title: '약속잡기',
-                            link: {
-                                mobileWebUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
-                                webUrl: 'https://havetogether.com/meet.php?id=<? echo $id; ?>',
-                            },
-                        }, ],
-                    })
-                };
-                window.kakaoDemoCallback && window.kakaoDemoCallback()
-            } catch (e) {
-                window.kakaoDemoException && window.kakaoDemoException(e)
-            }
-        </script>
+            <!-- Organizer -->
+            <div class="info-title">The <?php echo $event_type; ?></div>
+            <div class="info-img"><img src="<?php echo $main_img; ?>" alt="<?php echo $event_name; ?>"></div>
+            <div class="info-text">
+                <div class="icon"><i class="fas fa-comment-dots"></i></div>
+                <? echo $event_details; ?>
+            </div>
+            <!-- Organizer -->
+
+            <!-- Organizer -->
+            <div class="info-title">Organizer</div>
+            <div class="info-img"><img src="<? echo $event_organizer; ?>" alt="<? echo $organizer_name; ?>"></div>
+            <div class="info-text">
+                <div class="icon"><i class="far fa-user"></i></div>
+                <? echo $organizer_name; ?>
+            </div>
+            <div class="info-text">
+                <div class="icon"><i class="fas fa-comment-dots"></i></div>
+                <? echo $organizer_details ?>
+            </div>
+            <!-- Organizer -->
+
+            <!-- Participants -->
+            <div class="info-title">Participants</div>
+            <div class="info-text"><strong><? echo $particpants; ?> particpants</strong> <? echo $particpants_info; ?></div>
+            <!-- Participants -->
+
+            <!-- Location -->
+            <div class="info-title">Location</div>
+            <div class="info-text">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <? echo $event_location; ?>
+            </div>
+            <div class="info-text">
+                <div class="icon"><i class="fas fa-comment-dots"></i></div>
+                <? echo $location_details; ?>
+            </div>
+            <input type="hidden" name="location" id="location" value="<?php echo $xy; ?>">
+            <div id="staticMap" style="height:250px; border-radius: 25px;"></div>
+            <!-- Location -->
+        </div>
+    </div>
+    <div class="meet-box">
+        <div class="box-button">Let's Join</div>
+    </div>
+</div>
+<style>
+    .join {
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        display: none;
+    }
+
+    div#input-box {
+        display: flex;
+        width: 240px;
+        justify-content: space-between;
+        margin: 20px 0px;
+    }
+
+    .join-box {
+        background: #fff;
+        padding: 45px 30px;
+        border-radius: 25px;
+        -webkit-box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+        box-shadow: rgb(0 0 0 / 45%) 0px 1px 4px;
+        position: relative;
+    }
+
+    .lable {
+        width: 100px;
+    }
+
+    .inputs {
+        width: 140px;
+    }
+
+    .inputs input[type="text"] {
+        padding: 10px;
+        display: block;
+        margin: auto;
+        font-size: 15px;
+    }
+</style>
+
+<div class="join">
+    <div class="join-box">
+        <div id="join-col"><i class="far fa-times-circle"></i></div>
+        <form action="" id="tarrs">
+            <div style="text-align: center;">
+                <div style="font-size: 30px;color: var(--main-color);font-weight: bold;">Have Together</div>
+                <div style="font-size: 18px;color: #484848;">Join</div>
+            </div>
+            <div id="input-box">
+                <div class="inputs"><input type="text" id="names" name="names" placeholder="Name"></div>
+            </div>
+            <!-- <div id="input-box">
+                <div class="lable">E-mail</div>
+                <div class="inputs"><input type="text"></div>
+            </div> -->
+            <div id="Joins" style="background: var(--main-color);border: 0;color: #fff;padding: 7px 45px;margin: auto;border-radius: 25px;font-size: 18px;display: block;text-align: center;width: 70px;">Join</div>
+        </form>
     </div>
 </div>
 
 
 
+<?php
+include("meet_js.php");
+?>
 <?php
 include("./footer.php");
 ?>

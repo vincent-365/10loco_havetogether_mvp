@@ -56,7 +56,7 @@
                                         },
                                     },
                                     success: function(res) {
-                                        location.href = 'http://106.242.52.73/comp.php?id=<? echo $id; ?>&name=' + name;
+                                        location.href = 'https://havetogether.com/comp.php?id=<? echo $id; ?>&name=' + name;
                                     },
                                     fail: function(err) {
                                         alert('error: ' + JSON.stringify(err))

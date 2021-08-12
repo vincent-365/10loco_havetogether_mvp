@@ -49,7 +49,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 0px 10px;
+    padding: 10px 5px;
 }
 .meet-container .info .main-img{
     position: absolute;

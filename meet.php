@@ -171,7 +171,6 @@ if ($particpants < 3) {
 
     div#input-box {
         display: flex;
-        width: 240px;
         justify-content: space-between;
         margin: 20px 0px;
     }
@@ -188,11 +187,6 @@ if ($particpants < 3) {
     .lable {
         width: 100px;
     }
-
-    .inputs {
-        width: 140px;
-    }
-
     .inputs input[type="text"] {
         padding: 10px;
         display: block;

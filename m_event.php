@@ -18,17 +18,17 @@ include("./head.php");
                <input type="hidden" name="event_x" id="event_x">
                <input type="hidden" name="event_y" id="event_y">
                <div class="form_boxs">
-                    <div><input type="text" name="event_naem" id="event_naem" placeholder="Event Name"></div>
+                    <div><input type="text" name="event_naem" id="event_naem" placeholder="Event Name" required></div>
                     <div>
                          <div class="form_cat" id="choice_cat2">Type of event</div>
                     </div>
                </div>
                <div class="form_boxs">
                     <div>
-                         <input type="date" name="date" id="date" placeholder="Date">
+                         <input type="date" name="date" id="date" placeholder="Date" required>
                     </div>
                     <div>
-                         <input type="time" name="time" id="time" lang="" placeholder="Time">
+                         <input type="time" name="time" id="time" lang="" placeholder="Time" required>
                     </div>
                </div>
                <div class="particpantsss">
@@ -41,24 +41,25 @@ include("./head.php");
                </div>
                <div class="event_titles">Let's have</div>
                <div class="event_img"><img src="./bin/img/picpic.png" alt=""></div>
-               <div class="location-details"><textarea name="describe" id="describe" cols="40" rows="5" description="Describe the event" placeholder="Describe the event details"></textarea></div>
+               <div class="location-details"><textarea name="describe" id="describe" cols="40" rows="5" description="Describe the event" placeholder="Describe the event details" required></textarea></div>
                <div class="event_titles">Location</div>
-               <div class="location-address"><input type="text" name="address" id="address" description="Address" placeholder="Address" readonly></div>
-               <div class="location-details"><textarea name="location" id="location" cols="40" rows="5" description="Location details" placeholder="Location details"></textarea></div>
+               <div class="location-address"><input type="text" name="address" id="address" description="Address" placeholder="Address" readonly required></div>
+               <div class="location-details"><textarea name="location" id="location" cols="40" rows="5" description="Location details" placeholder="Location details" required></textarea></div>
                <div class="event_titles">Organizer</div>
                <div class="organizer_img"><img src="./bin/img/picpic.png" alt=""></div>
-               <div class="location-address"><input type="text" name="name" id="name" description="Name" placeholder="Name"></div>
-               <div class="location-details"><textarea name="organizerdet" id="organizerdet" cols="40" rows="5" description="Organizer details" placeholder="Organizer details"></textarea></div>
+               <div class="location-address"><input type="text" name="name" id="name" description="Name" placeholder="Name" required ></div>
+               <div class="location-details"><textarea name="organizerdet" id="organizerdet" cols="40" rows="5" description="Organizer details" placeholder="Organizer details" required></textarea></div>
                <div class="profiles">
                     <div id="profiles_clo"><i class="far fa-times-circle"></i></div>
                     <input type="file" name="profile" id="profile">
                </div>
+               <input type="submit" value="dddddddddddddddd" style="display:none;">
           </form>
      </div>
 </div>
 
 <div class="meet-box">
-     <div class="box-button">Let's Join</div>
+     <div class="box-button">Let's Meet</div>
 </div>
 <div id="mapsers">
      <div id="mapser">

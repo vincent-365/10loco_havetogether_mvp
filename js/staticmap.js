@@ -29,3 +29,4 @@ image: markerImage // 마커이미지 설정
 marker.setMap(map);
 map.setDraggable(false);
 map.setZoomable(false);
+

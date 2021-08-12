@@ -14,8 +14,8 @@ $event_y = $_POST['event_y'];
 $event_loc_details = $_POST['location'];
 $event_org_name = $_POST['name'];
 $event_org_details = $_POST['organizerdet'];
-$event_org_name_2 = $event_org_name+",";
-
+$event_org_name_2 = $event_org_name;
+echo $event_org_name_2;
 
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 if (isset($_FILES)) {

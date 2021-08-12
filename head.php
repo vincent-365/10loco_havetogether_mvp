@@ -1,7 +1,6 @@
 <?php
 include 'data/dbconfig.php'
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 

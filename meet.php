@@ -198,7 +198,7 @@ if ($particpants < 3) {
 <div class="join">
     <div class="join-box">
         <div id="join-col"><i class="far fa-times-circle"></i></div>
-        <form action="" id="tarrs">
+        <form action="" id="tarrs" onsubmit="return false;">
             <div style="text-align: center;">
                 <div style="font-size: 30px;color: var(--main-color);font-weight: bold;">Have Together</div>
                 <div style="font-size: 18px;color: #484848;">Join</div>

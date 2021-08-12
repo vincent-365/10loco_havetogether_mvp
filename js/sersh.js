@@ -36,3 +36,12 @@ function placesSearchCB(data, status, pagination) {
         $("#mapsers").css('display', 'none');
     })
 }
+$(function () {
+    $(".box-button").click(function () {
+        if(!$("#type").val() == "" && !$("#participants").val() == "" && !$("#profile").val() == "" && !$("#main_img").val() == ""){
+            $("#target").find('[type="submit"]').trigger('click');
+        }else{
+            alert("There are a part not been entered.")
+        }
+    })
+})

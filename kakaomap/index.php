@@ -21,7 +21,13 @@ if ($phpname == "/m_event.php") {
 ?>
 
 
-
+<?php
+if ($phpname == "/comp.php") {
+?>
+     <script src="./js/staticmap.js" type="text/javascript"></script>
+<?php
+}
+?>
 <?php
 if ($phpname == "/meet.php") {
 ?>

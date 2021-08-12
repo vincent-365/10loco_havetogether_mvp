@@ -57,7 +57,7 @@ if(!in_array($name,$event_particpants_pur)){
 
 <script>
      alert("Unreserved name");
-     $(location).href('https://havetogether.com/meet.php?id=<? echo $id; ?>')
+     location.href = 'https://havetogether.com/meet.php?id=<? echo $id; ?>';
 </script>
 
 <?php 

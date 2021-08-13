@@ -1,4 +1,4 @@
-<?php include('./kakaomap/index.php'); ?>
+<?php include('kakaomap/index.php'); ?>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-include './data/dbconfigs.php'
+include 'data/dbconfigs.php'
 ?>
 <!DOCTYPE html>
 <html lang="ko">
